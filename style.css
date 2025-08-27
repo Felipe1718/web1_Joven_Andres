@@ -1,0 +1,279 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* barra de arriba */
+.navegador {
+  display: flex;
+  justify-content: space-between;   /* Pone una ficha a la izquierda y otra a la derecha, dejando espacio en medio. */
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ddd;  /* Dibuja una rayita gris debajo de la caja, como separación. */
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;   /* Hace que la caja siempre quede por encima de otras cosas. */
+}
+
+.logo {
+  font-size: 20px;
+  color: #4a4de7;
+}
+
+.navegador ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navegador a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navegador a.active,
+.navegador a:hover {          /* esto lo que hace es poner el incio en azul*/
+  color: #4a4de7;
+}
+
+/* seccion principal */
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 60px;
+}
+
+.perfil-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f2f2f2;
+}
+
+.texto-principal {
+  max-width: 600px;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  color: #111;
+}
+
+.text h2 {
+  font-size: 1.5rem;
+  color: #4a4de7;
+  margin-bottom: 15px;
+}
+
+.text p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* Sección Logros */
+.logros {
+  background: #f9f9f9;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.logros h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.contenedor {
+  display: flex;             /* este contenedor tiene los 3 bloques de los logros*/
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cajitas {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.cajitas:hover {
+  transform: translateY(-5px);
+}
+
+.cajitas h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.cajitas p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Botón outline 
+.btn-outline {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #4a4de7;
+  border-radius: 6px;
+  color: #4a4de7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: #4a4de7;
+  color: #fff;
+}
+
+/* Sección Proyectos */
+.proyectos {
+  background: #f5f6fc;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.proyectos h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.contenedor2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.proyectos .cajitas2 {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 320px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.proyectos .cajitas2:hover {
+  transform: translateY(-5px);
+}
+
+.proyectos .cajitas2 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.proyectos .card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/*Seccion de Linea de tiempo*/
+
+.Linea-tiempo{
+  background-color: #e9f5ffda;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.Linea-tiempo h2{
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111
+}
+
+.contenedor3{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.Linea-tiempo .cajitas3{
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 320px;
+  text-align: left;
+  transition: transform 0.3;
+}
+
+.Linea-tiempo .cajitas3:hover{
+  transform: translateY(-5px);
+}
+
+.Linea-tiempo .cajitas3 h3{
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.Linea-tiempo p{
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Boton de WhatsApp*/
+.btn-whatsapp {
+position: fixed;
+bottom: 25px;
+right: 25px;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background-color: #25D366;
+color: white;
+padding: 12px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+transition: all 0.3s ease;
+box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+z-index: 1000;
+}
+
+.btn-whatsapp img {
+width: 24px;
+height: 24px;
+}
+
+.btn-whatsapp:hover {
+background-color: #1ebc57;
+transform: translateY(-5px);
+box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp:active {
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
